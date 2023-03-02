@@ -16,12 +16,44 @@
         }
         div:nth-child(1){
             /* display:none; */
+            display: block;
+            /* display:none하면 공간까지 사라져보이게됨 */
+        }
+        #d2{
+            /* visibility: hidden; */
+            /*  영역은 남아있되 안보이게 됨*/
+            visibility: visible;
+        }
+        #d3{
+            opacity: 0.5;
+            /* 투명도 : 0 투명~1 불투명 */
         }
     </style>
 </head>
 <body>
-    <div> 1 display</div>
-    <div>2 visiblity</div>
-    <div>3 opacity</div>
+    <div id="d1"> 1 display</div>
+    <div id="d2">2 visibility</div>
+    <div id="d3">3 opacity</div>
+    <hr>
+    <button onclick="showDiv()">show</button>
+    <!-- 버튼 클릭 시 showDiv()라는 함수 불러오겠다는 뜻 -->
+    <button onclick="hideDiv()">hide</button>
+    <script type="text/javascript">
+        function showDiv(){
+            // alert('hi')
+            var obj=document.getElementById('d1');
+            var obj2=document.getElementById('d2');
+            // alert(obj);
+            obj.style.display='block';
+            obj2.style.visibility='visible';
+        }
+        function hideDiv(){
+            var obj=document.getElementById('d1');
+            var obj2=document.getElementById('d2');
+            obj.style.display='none';
+            obj2.style.visibility='hidden';
+
+        }
+    </script>
 </body>
 </html>
