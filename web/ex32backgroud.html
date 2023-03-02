@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex32background.html</title>
+    <style>
+        body{
+            /* color: #acacff; */
+            color:rgb(125,80,200);
+            /* rgb(red,green,blue) 0~255 백분율
+               rgba(rgb, alpha)
+               alpha :  투명도(0~1사이 실수값) 0투명 1불투명*/
+        }
+        span{
+            font-size: 2em;
+            /* padding-top: 5px;/*위에만 패딩 주고싶을 때... top,left,bottom, right
+            padding-left: 10px;
+            padding-bottom: 20px;
+            padding-right:30px;
+            margin도 가능 */
+            padding:5px;
+            margin:30px;
+        }
+        span.sky{
+            background-color: skyblue;
+        }
+        .pink{
+            background-color: pink;
+        }
+        /* td태그에 배경색 주기 폭 25%*/
+        table>tbody>tr>td{
+            /* background-color: bisque; */
+            background-image: url(./images/icon1.png);
+            background-repeat: no-repeat; 
+            /* 배경이미지 반복 여부 repeat이 디폴트값 */
+            width:25%;
+
+        }
+        tr:nth-child(1)>td:nth-child(1){
+            background-repeat: repeat;
+        }
+        tr:nth-child(1)>td:nth-child(2){
+            background-repeat: repeat-x;
+        }
+        tr:nth-child(1)>td:nth-child(3){
+            background-repeat: repeat-y;
+        }
+        tr:nth-child(2)>td:nth-child(1){
+            background-position: left top;
+        }
+        tr:nth-child(2)>td:nth-child(2){
+            background-position: right bottom;
+        }
+        tr:nth-child(2)>td:nth-child(3){
+            background-position: 50% 50%;
+        }
+        tr:nth-child(2)>td:nth-child(4){
+            background-position: 50px 50px;
+        }   
+        textarea{
+            font-size: 1.2em;
+            background-image: url(./images/car1.png);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            border: 2px solid seagreen;
+        }
+        div#bgimg{
+            border:1px solid red;
+            width:90%;
+            margin: auto;
+            height: 400px;
+            background-image: url(./images/flower2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            /* background-size: 300px 300px */
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>배경 관련 스타일</h1>
+    <span class="sky">배경색 적용하기</span>
+    <span class="pink">배경색 적용하기2</span>
+    <h2 class="sky">배경에 이미지 적용</h2>
+    <hr>
+    <table border="1" height="400" width="90%">
+        <tr>
+            <td>repeat</td>
+            <td>repeat-x</td>
+            <td>repeat-y</td>
+            <td>no-repeat</td>
+        </tr>
+        <tr>
+            <td>기본 위치는 left top</td>
+            <td>right-bottom</td>
+            <td>50% 50%</td>
+            <td>50px 50px</td>
+        </tr>
+    </table>
+    <hr color="blue">
+    <textarea class="txt" rows="10" cols="50">안녕하세요?</textarea>
+    <div id="bgimg">
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex41important.html
+    </title>
+    <style>
+        p{
+            color: red !important;
+            /* important넣으면 우선순위 맨위로 올라감 */
+        }
+        #obj{
+            color: blue;
+            font-size: 2em;
+        }
+        div.desert{
+            font-size: 2em;
+            color: chocolate;
+            
+        }
+        .desert{
+            color:green;
+
+        }
+        div{
+            color:blue;
+        }
+        /* em, rem 
+            em: 부모크기기준
+            rem: 원래 크기 기준 */
+        .parent{
+            color: orangered;
+            font-size: 2rem;
+        }
+        .child{
+            font-size:3rem;
+        }
+    </style>
+</head>
+<body>
+    <p id="obj">Will be red</p>
+    <div class="desert">Will be Chocolate</div>
+    <hr color="blue">
+    <div class="parent">Parent div
+        <div class="child">Child Div</div>
+    </div>
+    
+</body>
+</html>

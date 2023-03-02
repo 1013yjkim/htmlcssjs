@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex33_list.html</title>
+    <style>
+        /* class가 menu가 아닌 ul > li에 아래 스타일을 주세요
+            테두리: 1px solid 색상
+            안쪽여백: 5px
+            바깥여백: 5px            
+        */
+        ul:not(.menu)>li{
+            border: 1px solid darkblue;
+            padding: 5px;
+            margin:5px;
+            /* list-style-type:none; 동글뱅이 없애는것*/
+        }
+                /* .menu > li 에 대해 아래와 같이 스타일정의하기
+	   - 폭:120px  높이:25px
+	   - 배경색: lightblue;
+	   - 마진: 3px
+	   - 패딩: 10px
+	   - 글자색: 알아서
+	   - 서체: Helvetica, sans-serif
+	   - 글자크기 : 13px;
+	   - 글자정렬: 중앙에 오도록*/
+       ol>li{
+        list-style-type: upper-alpha;
+       }
+       .menu>li{
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+
+            margin: 3px;
+            padding: 10px;
+            /* color: blueviolet; a태그때문에 안먹음 a태그에서 정의해야함 */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            text-align: center;
+            list-style-type: none;
+            float:left;
+            /* float으로 배치 어떻게 할 지 정할 수 있음 float속성을 주면 그 아래의 요소까지 영향을 받는다. */
+       }
+       .menu+hr{
+        clear:both;
+        /* 위에서 준 float속성 해제할때 clear사용 : right left both */
+       }
+       a:link{
+        text-decoration: none;
+       }
+    </style>
+</head>
+<body>
+    <h1>목록 스타일</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>Java</li>
+    </ul>
+    <hr>
+    <ol>
+        <li>Oracle</li>
+        <li>SQL server</li>
+        <li>Infomix</li>
+    </ol>
+    <hr color="red">
+    <ul class="menu">
+        <li><a href="http://www.naver.com">HTML</a></li>
+        <li><a href="http://www.naver.com">CSS</a></li>
+        <li><a href="http://www.naver.com">Javascript</a></li>
+        <li><a href="http://www.naver.com">Java</a></li>
+        <hr color="blue">
+    </ul>
+</body>
+</html>
